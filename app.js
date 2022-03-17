@@ -29,6 +29,16 @@ const friendData = [
     },
 ];
 
+const randomNames = [
+    'Mr. Nobody',
+    'Mr. Pink',
+    'Mr. Blonde',
+    'Mr. White',
+    'Mr. Orange',
+    'Mr. Brown',
+    'Mr. Blue'
+];
+
 addMushroomButton.addEventListener('click', () => {
     if (Math.random() > 0.5) {
         alert('found a mushroom!');
@@ -46,7 +56,7 @@ addFriendButton.addEventListener('click', () => {
     if (friendInputEl.value !== '') {
         friendName = friendInputEl.value; 
     } else {
-        friendName = 'Mr. Nobody';
+        friendName = randomNames[Math.floor(Math.random() * randomNames.length)];
     }
     // create a new friend object
     const friend = {
